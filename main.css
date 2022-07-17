@@ -1,0 +1,153 @@
+* {
+    background: #1f2833;
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
+    font-size: 25px;
+    color: #66FCF1;
+}
+
+.out {
+    margin-top: 30px;
+}
+
+.par {
+    z-index: 1;
+}
+
+#slider {
+    z-index: 1;
+    position: relative;
+    width: 820px;
+}
+
+.range {
+    -webkit-appearance: none;
+    background-color: #66FCF1;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #45A29E;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #45A29E;
+}
+
+.container {
+    position: absolute;
+    right: 5%;
+    left: 2%;
+}
+
+.numbersin {
+    color: #45A29E;
+    background: #45A29E;
+}
+
+a {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background-color: #27323f;
+    color: #45A29E;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+}
+
+a:hover {
+    color: #66FCF1;
+}
+
+a span {
+    display: block;
+    position: absolute;
+    background: #45A29E;
+}
+
+a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.5s;
+}
+
+a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.circle {
+    z-index: 0;
+    position: absolute;
+    top: 1000;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(120, 167, 188);
+    clip-path: polygon(0 90%, 100% 76%, 100% 100%, 0% 100%);
+}
